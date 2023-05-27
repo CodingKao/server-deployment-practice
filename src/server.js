@@ -1,12 +1,10 @@
 'use strict';
 
-
 const express = require('express');
-const cors = require('cors')
+const cors = require('cors');
 
 // create express singleton
 const app = express();
-
 
 // middleware
 app.use(cors());
@@ -26,8 +24,8 @@ app.get('/bad', (req, res, next) => {
 
 app.use('*', (req, res, next) => {
   res.status(404).send('Not Found');
-})
+});
 
 const start = (port) => app.listen(port, () => console.log('listening on port:', port));
 
-module.exports = { start, app }
+module.exports = { start, app };

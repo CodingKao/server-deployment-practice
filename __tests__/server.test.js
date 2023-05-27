@@ -31,6 +31,6 @@ describe('Server', () => {
     const response = await mockRequest.get('/foo');
     expect(response.status).toEqual(404);
 
-  })
+  });
 
-})
+});
